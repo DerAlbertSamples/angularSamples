@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="theApp" ng-strict-di>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- assets:css -->
+    <link rel="stylesheet" href="/assets/bootstrap/dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="/assets/bootstrap/dist/css/bootstrap.css">
+    <!-- endinject -->
+    <!-- app:css -->
+    <link rel="stylesheet" href="/css/app.css">
+    <!-- endinject -->
+</head>
+<body>
+
+<div ng-controller="HomeController as ctrl">
+    {{ctrl.text}}
+    <button level="danger">Hello</button>
+    <button size="lg" type="submit">Submit it</button>
+    <input type="submit" value="Ff"/>
+</div>
+
+<!-- assets:js -->
+<script src="/assets/angular/angular.js"></script>
+<script src="/assets/angular-animate/angular-animate.js"></script>
+<script src="/assets/angular-route/angular-route.js"></script>
+<!-- endinject -->
+<!-- app:js -->
+<script src="/app/core/directives/button.js"></script>
+<script src="/app/core/directives/directives.js"></script>
+<script src="/app/modules/home/Home.js"></script>
+<script src="/app/app.js"></script>
+<!-- endinject -->
+</body>
+</html>
