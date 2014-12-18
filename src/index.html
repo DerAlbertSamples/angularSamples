@@ -21,7 +21,7 @@
     <input type="submit" value="Ff"/>
     <a sm-button level="danger" href="#/">Foo</a>
 
-    <form sm-cols-left="2" sm-cols-right="10">
+    <sm-form horizontal="true" cols-left="2" cols-right="10">
         <div class="form-group">
             <label class="col-sm-2 control-label">Das Label</label>
             <div class="col-sm-10">
@@ -32,10 +32,10 @@
 
 
         <h2>Element</h2>
-        <sm-field caption="ctrl.text" label-cols="1">
+        <sm-field caption="ctrl.text">
             <input placeholder="FooBar" ng-model="ctrl.text">
         </sm-field>
-        <sm-field caption="ctrl.data.text" label-cols="3">
+        <sm-field caption="ctrl.data.text" input-cols="7">
             <input placeholder="FooBar" ng-model="ctrl.data.text">
         </sm-field>
         <sm-field caption="$scope.data.text">
@@ -43,7 +43,7 @@
         </sm-field>
 
 
-    </form>
+    </sm-form>
 </div>
 
 <!-- assets:js -->
