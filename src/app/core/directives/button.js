@@ -38,7 +38,17 @@
                 if (attributes.type === 'submit') {
                     element.addClass('btn-primary');
                 }
-                addLevelAndSize('btn', 'element', attributes);
+                addLevelAndSize('btn', element, attributes);
+            }
+        };
+    });
+
+    module.directive('smButton', function () {
+        return {
+            restrict: 'A',
+            compile: function (element, attributes) {
+                element.addClass('btn');
+                addLevelAndSize('btn', element, attributes);
             }
         };
     });

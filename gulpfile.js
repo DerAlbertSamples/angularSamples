@@ -14,7 +14,8 @@ var config = {
 
 gulp.task('browser-sync', function(){
 	browserSync({
-		server : { baseDir : config.siteDir }
+		server : { baseDir : config.siteDir },
+		browser: "chrome"
 	})
 });
 
@@ -38,7 +39,8 @@ gulp.task('inject-assets', function(){
 	var assetsStream = gulp.src([config.assetsDir + "/**/*"], {read:false});
 	var appFiles = [
 		config.siteDir + "/css/*.css",
-		config.appDir + "/core/**/*.js",
+		config.appDir + "/core/*/*.js",
+		config.appDir + "/core/*.js",
 		config.appDir + "/modules/**/*.js",
 		config.appDir + "/*.js"
 	];

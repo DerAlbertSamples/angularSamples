@@ -4,11 +4,15 @@
 (function (angular) {
     var module = angular.module('sm.home', ['sm.directives'])
 
-    function HomeController() {
-        this.text = 'Foobar';
+    function HomeController($scope) {
+        this.text = 'Ein Input';
+        this.data = {
+            text: 'Zwei Input'
+        }
+        $scope.data = this.data;
     }
 
-    HomeController.$inject = [];
+    HomeController.$inject = ['$scope'];
 
     module.controller('HomeController', HomeController);
 })(angular);
